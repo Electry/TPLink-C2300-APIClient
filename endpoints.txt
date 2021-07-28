@@ -1,0 +1,202 @@
+login:
+- auth
+- login
+- keys
+
+locale:
+- index_lang
+- index_list
+- country
+
+upgrade:
+- read
+
+admin/region:
+- region
+
+admin/system:
+- sysmode
+
+admin/firmware
+- upgrade
+- config
+- save_upgrade
+- config_multipart
+
+admin/cloud_account:
+- check_cloud_version
+- check_upgrade
+- cloud_upgrade
+- get_deviceInfo
+
+admin/menu:
+- basic_menu
+- advanced_menu
+
+admin/wireless:
+- region
+- wireless_schedule_wifi_disable
+- smart_connect
+- wireless_2g
+- wireless_5g
+- syspara_2g
+- syspara_5g
+- wps_pin
+- wps_connect
+- syspara_wps
+- wireless_schedule
+- guest
+- guest_2g
+- guest_5g
+- guest_2g5g
+
+admin/status:
+- client_status
+- all
+- internet
+- router
+- speedtest
+
+admin/onemesh_network:
+- mesh_sclient_list_all
+- available_mesh_device_list
+- mesh_topology
+
+admin/network:
+- mac_clone_advanced
+- status_ipv4
+- wan_ipv4_protos
+- wan_ipv6_protos
+- wan_ipv4_status
+- wan_ipv6_status
+- wan_ipv4_pppoe
+- lan_ipv4
+- lan_ipv6
+- routes_static
+- routes_system
+- port_speed_supported
+- port_speed_current
+
+admin/iptv:
+- setting
+
+admin/dhcps:
+- setting
+- client
+- reservation
+
+admin/ddns:
+- provider
+- noip
+- dyndns
+
+admin/disk_setting:
+- first
+- metadata
+
+admin/folder_sharing:
+- settings
+- server
+- auth
+- partial
+- media
+- volumn
+- mode
+
+admin/time_machine:
+- settings
+
+admin/smart_network:
+- patrol_owner_list
+- patrol_filter
+- patrol_limit
+- filter_apps_list
+- tm_qos
+- device_priority
+
+admin/security:
+- info
+- category
+- rule
+
+admin/security_settings:
+- new_enable
+- dos_setting
+
+admin/access_control:
+- enable
+- mode
+- guest_network
+- black_devices
+- black_list
+- white_devices
+- white_list
+
+admin/imb:
+- setting
+- bind_list
+- arp_list
+
+admin/nat:
+- alg
+- setting
+- vs
+- pt
+- dmz
+
+admin/upnp:
+- enable
+- service
+
+admin/administration:
+- remote
+- account
+- recovery
+- mode
+- local
+- https
+- check_factory_default
+
+admin/pptpd:
+- config
+- accounts
+
+admin/openvpn:
+- config
+
+admin/vpnconn:
+- config
+
+admin/time:
+- hour24
+- timezone
+- settings
+- dst
+
+admin/ledgeneral:
+- setting
+
+admin/ledpm:
+- setting
+
+admin/diag:
+- diag
+- port_mirror
+
+admin/reboot:
+- set
+
+admin/syslog:
+- types
+- filter
+- log
+- mail
+
+admin/traffic:
+- status
+- dev_name
+- lists
+- data
+
+admin/quick_setup:
+- quick_setup
