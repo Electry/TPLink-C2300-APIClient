@@ -48,10 +48,10 @@ class TPLinkClient:
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'X-Requested-With': 'XMLHttpRequest',
     }
-    
+
     def __init__(self, host):
         self.req = requests.Session()
-        
+
         self.host = host
         self.token = None
 
@@ -148,12 +148,12 @@ class TPLinkClient:
         data_arr = []
         for attr, value in data.items():
             data_arr.append('{}={}'.format(attr, value))
-  
+
         return '&'.join(data_arr)
 
     def __hash_pw(self, arg1, arg2 = None):
         md5 = MD5.new()
-        
+
         if arg2 is not None:
             md5.update((arg1 + arg2).encode('utf8'))
         else:
@@ -172,7 +172,7 @@ class TPLinkClient:
         rsa = PKCS1_v1_5.new(pub_key)
 
         binpw = password.encode('utf8')
-        
+
         encrypted = rsa.encrypt(binpw)
         as_string = binascii.hexlify(encrypted).decode('utf8')
 
@@ -221,7 +221,7 @@ class TPLinkClient:
             # used for E2E encrypted communication
             aes_key, aes_iv = self.aes_key
             aes_key_string = 'k={}&i={}'.format(aes_key, aes_iv)
-            
+
             sign_data = '{}&h={}&s={}'.format(aes_key_string, self.md5_hash_pw, rsa_seq + body_data_len)
         else:
             sign_data = 'h={}&s={}'.format(self.md5_hash_pw, rsa_seq + body_data_len)
