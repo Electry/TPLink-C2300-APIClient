@@ -296,7 +296,15 @@ class TPLinkClient:
         assert response['success'] == True
 
         '''
+        Example responses:
+
+        {'errorcode': 'login failed', 'success': False, 'data': {'failureCount': 1, 'errorcode': '-5002', 'attemptsAllowed': 9}}
+
         {'errorcode': 'exceeded max attempts', 'success': False, 'data': {'failureCount': 10, 'attemptsAllowed': 0}}
+
+        {'errorcode': 'user conflict', 'success': False, 'data': {}}
+
+        {'success': True, 'data': {'stok': '94640fd8887fb5750d6a426345581b87'}}
         '''
 
         return response['data']['stok']
